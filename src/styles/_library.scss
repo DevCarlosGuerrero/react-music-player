@@ -1,0 +1,65 @@
+* {
+  scrollbar-color: rgba(155, 155, 155, 05);
+}
+
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32rem;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 2px 50px rgba(204, 204, 204, 1);
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+
+  h2 {
+    padding: 3.2rem;
+    font-weight: 700;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    background-color: rgba(222, 222, 255, 1);
+  }
+
+  img {
+    width: 30%;
+  }
+}
+
+.song-description {
+  padding-left: 1.6rem;
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.selected {
+  background-color: rgb(182, 182, 252);
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
